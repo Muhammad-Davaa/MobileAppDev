@@ -15,6 +15,7 @@ class FragmentActivity : AppCompatActivity() {
         val mFragmentManager = supportFragmentManager
         val fragment1 = Blank1Fragment()
 
+
         val fragment = mFragmentManager.findFragmentByTag(Blank1Fragment::class.java.simpleName)
         if(fragment !is Blank1Fragment) {
             mFragmentManager
@@ -22,5 +23,6 @@ class FragmentActivity : AppCompatActivity() {
                 .add(R.id.fragment_container, fragment1, Blank1Fragment::class.java.simpleName)
                 .commit()
         }
+
     }
 }
